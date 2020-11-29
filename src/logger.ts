@@ -1,4 +1,4 @@
 import Logger from '@ptkdev/logger'
-const logger = new Logger();
+const logger = new Logger()
 
 export default logger
