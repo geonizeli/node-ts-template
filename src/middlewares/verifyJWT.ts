@@ -3,7 +3,7 @@ import admin from 'firebase-admin'
 import StatusCode from 'http-status-codes'
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const verifyTokenMiddleware = async (
+export const verifyJWTMiddleware = async (
   req: Request,
   res: Response,
   next: NextFunction

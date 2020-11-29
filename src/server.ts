@@ -1,9 +1,9 @@
 import express from 'express'
-import { loggerMiddleware, verifyTokenMiddleware } from './middlewares'
+import { loggerMiddleware, verifyJWTMiddleware } from './middlewares'
 
 const server = express()
 
-server.use('/', loggerMiddleware, verifyTokenMiddleware)
+server.use('/', loggerMiddleware, verifyJWTMiddleware)
 
 server.get('/', (_req, res) => {
   res.send('Hello, World!')

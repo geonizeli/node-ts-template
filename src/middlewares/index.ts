@@ -1,2 +1,2 @@
 export { loggerMiddleware } from './logger'
-export { verifyTokenMiddleware } from './verifyToken'
+export { verifyJWTMiddleware } from './verifyJWT'
