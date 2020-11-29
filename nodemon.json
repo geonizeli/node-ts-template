@@ -1,0 +1,6 @@
+{
+  "watch": ["src/**/*.*"],
+  "ext": "ts,js,graphql",
+  "ignore": ["src/**/*.test.ts"],
+  "exec": "yarn build && node dist/index.js"
+}

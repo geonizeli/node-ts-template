@@ -5,12 +5,13 @@
   "author": "João Geonizeli <joao.geonizeli@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist && tsc",
-    "start": "yarn build && tsc -w & nodemon dist/index.js",
+    "build": "tsc",
+    "start": "yarn nodemon",
     "lint": "eslint --ext js,jsx,ts,tsx ./src",
     "lint:fix": "eslint --fix --ext js,jsx,ts,tsx ./src"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
