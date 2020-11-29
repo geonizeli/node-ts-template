@@ -1,4 +1,8 @@
 import 'dotenv/config'
+import server from './server'
 
-console.log('Hello, World!')
-console.log(process.env.NODE_ENV)
+const httpPort = process.env.PORT
+
+server.listen(httpPort, () => {
+  console.error(`🚀 server up and running on port ${httpPort}`)
+})
