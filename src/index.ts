@@ -1,5 +1,6 @@
 import 'dotenv/config'
-import logger from './logger'
+import './utils/firebaseAdmin'
+import logger from './utils/logger'
 import server from './server'
 
 const httpPort = process.env.PORT

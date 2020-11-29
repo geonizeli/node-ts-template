@@ -24,6 +24,8 @@
   },
   "dependencies": {
     "@ptkdev/logger": "^1.7.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "firebase-admin": "^9.4.1",
+    "http-status-codes": "^2.1.4"
   }
 }
