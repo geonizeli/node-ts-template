@@ -9,16 +9,18 @@ export const verifyJWTMiddleware = async (
   next: NextFunction
 ) => {
   const { authorization } = req.headers
+  const throwInvalidRequestError = () =>
+    res.status(StatusCode.UNAUTHORIZED).json({
+      error: 'Invalid request!',
+    })
 
   if (authorization) {
     admin
       .auth()
       .verifyIdToken(authorization)
-      .then(() => {
-        next()
-      })
-      .catch(() => {
-        res.status(StatusCode.UNAUTHORIZED)
-      })
+      .then(() => next())
+      .catch(() => throwInvalidRequestError())
+  } else {
+    throwInvalidRequestError()
   }
 }
